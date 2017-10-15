@@ -1,4 +1,4 @@
-import { AppRegistry } from 'react-native';
-import App from './app/index';
+import { AppRegistry } from 'react-native'
+import App from './app/index'
 
-AppRegistry.registerComponent('ESReactNative', () => App);
+AppRegistry.registerComponent('ESReactNative', () => App)

@@ -5,4 +5,4 @@ export default {
     text: { color: '#fff' },
     container: { backgroundColor: '#F44336' },
   },
-};
+}

@@ -1,25 +1,25 @@
-import PropTypes from 'prop-types';
-import React from 'react';
-import { View } from 'react-native';
-import { FormLabel, FormInput } from 'react-native-elements';
-import styles from './styles';
+import PropTypes from 'prop-types'
+import React from 'react'
+import { View } from 'react-native'
+import { FormLabel, FormInput } from 'react-native-elements'
+import styles from './styles'
 
-const Input = (props) => {
+const Input = props => {
   return (
     <View>
       <FormLabel>{props.label}</FormLabel>
       <FormInput
-        autoCapitalize="none"
+        autoCapitalize='none'
         autoCorrect={false}
         inputStyle={styles.input}
         {...props}
       />
     </View>
-  );
-};
+  )
+}
 
 Input.propTypes = {
   label: PropTypes.string,
-};
+}
 
-export default Input;
+export default Input

@@ -1,3 +1,3 @@
-import FloatingButton from './FloatingButton';
+import FloatingButton from './FloatingButton'
 
-export default FloatingButton;
+export default FloatingButton

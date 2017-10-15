@@ -1,33 +1,39 @@
-import PropTypes from 'prop-types';
-import React from 'react';
-import { Button } from 'react-native-elements';
-import styles from './styles';
+import PropTypes from 'prop-types'
+import React from 'react'
+import { Button } from 'react-native-elements'
+import styles from './styles'
 
-const PrimaryButton = (props) => {
+const PrimaryButton = props => {
   if (props.loading) {
     return (
       <Button
         large
         {...props}
-        buttonStyle={[styles.primaryButton, props.buttonStyle && props.buttonStyle]}
+        buttonStyle={[
+          styles.primaryButton,
+          props.buttonStyle && props.buttonStyle,
+        ]}
         disabled={props.loading}
-        title=""
+        title=''
       />
-    );
+    )
   }
 
   return (
     <Button
       large
       {...props}
-      buttonStyle={[styles.primaryButton, props.buttonStyle && props.buttonStyle]}
+      buttonStyle={[
+        styles.primaryButton,
+        props.buttonStyle && props.buttonStyle,
+      ]}
     />
-  );
-};
+  )
+}
 
 PrimaryButton.propTypes = {
   buttonStyle: PropTypes.object,
   loading: PropTypes.bool,
-};
+}
 
-export default PrimaryButton;
+export default PrimaryButton

@@ -1,5 +1,5 @@
-import { create } from 'react-native-platform-stylesheet';
-import colors from '../../config/colors';
+import { create } from 'react-native-platform-stylesheet'
+import colors from '../../config/colors'
 
 export default create({
   header: {
@@ -8,4 +8,4 @@ export default create({
     color: colors.defaultText,
     marginVertical: 20,
   },
-});
+})

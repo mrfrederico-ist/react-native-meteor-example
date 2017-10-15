@@ -1,5 +1,5 @@
-import { create } from 'react-native-platform-stylesheet';
-import colors from '../../config/colors';
+import { create } from 'react-native-platform-stylesheet'
+import colors from '../../config/colors'
 
 export default create({
   primaryButton: {
@@ -18,4 +18,4 @@ export default create({
   input: {
     height: 40,
   },
-});
+})

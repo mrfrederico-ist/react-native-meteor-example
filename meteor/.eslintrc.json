@@ -8,13 +8,8 @@
     },
     "allowImportExportEverywhere": true
   },
-  "plugins": [
-    "meteor"
-  ],
-  "extends": [
-    "airbnb",
-    "plugin:meteor/recommended"
-  ],
+  "plugins": [ "meteor" ],
+  "extends": [ "airbnb", "plugin:meteor/recommended" ],
   "rules": {
     "import/extensions": "off",
     "import/no-extraneous-dependencies": "off",
@@ -36,21 +31,19 @@
         "templateInstanceParamName": "instance"
       }
     ],
-    "meteor/template-names": [
-      "off"
-    ],
+    "meteor/template-names": [ "off" ],
     "react/jsx-filename-extension": [
       1,
       {
-        "extensions": [
-          ".js",
-          ".jsx"
-        ]
+        "extensions": [ ".js", ".jsx" ]
       }
     ],
     "react/forbid-prop-types": "off",
     "jsx-a11y/no-static-element-interactions": "off",
-    "prefer-arrow-callback": "off"
+    "prefer-arrow-callback": "off",
+    "semi": "off",
+    "array-bracket-spacing": "off",
+    "arrow-parens": "off"
   },
   "settings": {
     "import/resolver": "meteor"

@@ -5,4 +5,4 @@ export default {
   iconSubtle: '#a2a2a2',
   textSubtle: '#848484',
   red: '#F44336',
-};
+}

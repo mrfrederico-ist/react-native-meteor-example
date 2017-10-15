@@ -1,9 +1,9 @@
-import { create } from 'react-native-platform-stylesheet';
-import colors from '../../config/colors';
+import { create } from 'react-native-platform-stylesheet'
+import colors from '../../config/colors'
 
-export const ICON_SIZE = 70;
-export const ICON_SIZE_SMALL = 40;
-export const ICON_COLOR = colors.iconSubtle;
+export const ICON_SIZE = 70
+export const ICON_SIZE_SMALL = 40
+export const ICON_COLOR = colors.iconSubtle
 
 export default create({
   container: {
@@ -20,4 +20,4 @@ export default create({
   textSmall: {
     fontSize: 16,
   },
-});
+})

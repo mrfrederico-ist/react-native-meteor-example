@@ -1,5 +1,5 @@
-import MapCallout from './MapCallout';
-import styles from './styles';
+import MapCallout from './MapCallout'
+import styles from './styles'
 
-export { styles };
-export default MapCallout;
+export { styles }
+export default MapCallout

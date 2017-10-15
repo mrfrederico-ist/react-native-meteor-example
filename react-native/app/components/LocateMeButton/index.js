@@ -1,3 +1,3 @@
-import LocateMeButton from './LocateMeButton';
+import LocateMeButton from './LocateMeButton'
 
-export default LocateMeButton;
+export default LocateMeButton

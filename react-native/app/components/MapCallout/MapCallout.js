@@ -1,9 +1,9 @@
-import PropTypes from 'prop-types';
-import React from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
-import styles from './styles';
+import PropTypes from 'prop-types'
+import React from 'react'
+import { View, Text, TouchableOpacity } from 'react-native'
+import styles from './styles'
 
-const MapCallout = (props) => {
+const MapCallout = props => {
   return (
     <View style={styles.container}>
       <TouchableOpacity onPress={props.onPress} style={styles.bubble}>
@@ -13,13 +13,13 @@ const MapCallout = (props) => {
         </View>
       </TouchableOpacity>
     </View>
-  );
-};
+  )
+}
 
 MapCallout.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
   onPress: PropTypes.func,
-};
+}
 
-export default MapCallout;
+export default MapCallout

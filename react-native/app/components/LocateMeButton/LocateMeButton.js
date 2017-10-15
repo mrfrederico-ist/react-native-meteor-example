@@ -1,10 +1,10 @@
-import PropTypes from 'prop-types';
-import React from 'react';
-import { TouchableHighlight, View } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
-import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import PropTypes from 'prop-types'
+import React from 'react'
+import { TouchableHighlight, View } from 'react-native'
+import Icon from 'react-native-vector-icons/MaterialIcons'
+import FontAwesome from 'react-native-vector-icons/FontAwesome'
 
-import styles, { ICON_COLOR, ICON_SIZE, UNDERLAY_COLOR } from './styles';
+import styles, { ICON_COLOR, ICON_SIZE, UNDERLAY_COLOR } from './styles'
 
 const LocateMeButton = ({ onPress = () => null, loading = false }) => {
   return (
@@ -15,29 +15,29 @@ const LocateMeButton = ({ onPress = () => null, loading = false }) => {
       disabled={loading}
     >
       <View style={styles.button}>
-        {loading ?
+        {loading ? (
           <FontAwesome
-            name="spinner"
+            name='spinner'
             size={ICON_SIZE}
             color={ICON_COLOR}
             style={styles.icon}
           />
-        :
+        ) : (
           <Icon
-            name="my-location"
+            name='my-location'
             size={ICON_SIZE}
             color={ICON_COLOR}
             style={styles.icon}
           />
-        }
+        )}
       </View>
     </TouchableHighlight>
-  );
-};
+  )
+}
 
 LocateMeButton.propTypes = {
   onPress: PropTypes.func,
   loading: PropTypes.bool,
-};
+}
 
-export default LocateMeButton;
+export default LocateMeButton

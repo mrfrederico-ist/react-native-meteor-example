@@ -7,6 +7,7 @@ import { Button, Card, List, ListItem } from 'react-native-elements'
 
 import colors from '../config/colors'
 
+import { connectAlert } from '../components/Alert'
 import Container from '../components/Container'
 import NotFound from '../components/NotFound'
 import { Header } from '../components/Text'
@@ -20,24 +21,27 @@ class LocationDetails extends Component {
   }
 
   attemptCheckin = () => {
-    const { location, alertWithType } = this.props
-
+    const { user, location, alertWithType, navigation } = this.props
     let status = CHECKED_IN
     if (location.checkedInUserId) {
       status = CHECKED_OUT
     }
 
-    this.setState({ changingStatus: true })
-    Meteor.call(
-      'Locations.changeCheckin',
-      { locationId: location._id, status },
-      err => {
-        if (err) {
-          alertWithType('error', 'Error', err.reason)
-        }
-        this.setState({ changingStatus: false })
-      },
-    )
+    if (user) {
+      this.setState({ changingStatus: true })
+      Meteor.call(
+        'Locations.changeCheckin',
+        { locationId: location._id, status },
+        err => {
+          if (err) {
+            alertWithType('error', 'Error', err.reason)
+          }
+          this.setState({ changingStatus: false })
+        },
+      )
+    } else {
+      navigation.navigate('Account')
+    }
   }
 
   renderItems = () => {
@@ -128,6 +132,6 @@ const ConnectedLocationDetails = createContainer(params => {
       { sort: { createdAt: -1 } },
     ),
   }
-}, LocationDetails)
+}, connectAlert(LocationDetails))
 
 export default ConnectedLocationDetails

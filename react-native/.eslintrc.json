@@ -16,6 +16,7 @@
     "react/prefer-stateless-function": [ 0 ],
     "semi": "off",
     "jsx-quotes": [ "error", "prefer-single" ],
-    "array-bracket-spacing": "off"
+    "array-bracket-spacing": "off",
+    "object-curly-newline": "off"
   }
 }

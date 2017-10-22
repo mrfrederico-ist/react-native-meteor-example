@@ -6,6 +6,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons'
 import FindNearMe from '../screens/FindNearMe'
 import LocationDetails from '../screens/LocationDetails'
 import NearMe from '../screens/NearMe'
+import NearMeMap from '../screens/NearMeMap'
 import SignIn from '../screens/SignIn'
 import SignUp from '../screens/SignUp'
 import ProfileLayout from '../screens/ProfileLayout'
@@ -29,6 +30,12 @@ export const HomeStack = StackNavigator(
       screen: NearMe,
       navigationOptions: {
         title: 'Near Me',
+      },
+    },
+    NearMeMap: {
+      screen: NearMeMap,
+      navigationOptions: {
+        title: 'Near Me Map',
       },
     },
   },

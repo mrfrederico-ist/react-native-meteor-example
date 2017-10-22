@@ -22,7 +22,7 @@ class FindNearMe extends Component {
       if (err) {
         this.props.alertWithType('error', 'Error', err.reason)
       } else {
-        this.props.navigation.navigate('NearMe', { locations })
+        this.props.navigation.navigate('NearMe', { locations, position })
       }
 
       this.setState({ loading: false })

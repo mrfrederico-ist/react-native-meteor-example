@@ -4031,6 +4031,10 @@ react-native-elements@^0.17.0:
     react-native-side-menu "^1.0.2"
     react-native-tab-navigator "^0.3.4"
 
+react-native-maps@^0.17.1:
+  version "0.17.1"
+  resolved "https://registry.yarnpkg.com/react-native-maps/-/react-native-maps-0.17.1.tgz#ab2236341fd984dac8864202ae55331bc262f60c"
+
 "react-native-meteor@git+https://github.com/mrfrederico-ist/react-native-meteor.git":
   version "1.1.0"
   resolved "git+https://github.com/mrfrederico-ist/react-native-meteor.git#96338393e03e497dbfd9795167de4f488cf6b361"

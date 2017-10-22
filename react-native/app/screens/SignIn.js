@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import Meteor from 'react-native-meteor'
 import { Card } from 'react-native-elements'
-import { NavigationActions } from 'react-navigation'
+
+import { resetScreen } from '../config/utils'
 
 import { connectAlert } from '../components/Alert'
 import Container from '../components/Container'
@@ -31,11 +32,10 @@ class SignUp extends Component {
     return Meteor.loginWithPassword(emailOrUsername, password, err => {
       this.setState({ loading: false })
       if (!err) {
-        const resetAction = NavigationActions.reset({
-          index: 0,
-          actions: [ NavigationActions.navigate({ routeName: 'Profile' }) ],
+        resetScreen({
+          routeName: 'Profile',
+          dispatch: this.props.navigation.dispatch,
         })
-        this.props.navigation.dispatch(resetAction)
       } else {
         this.props.alertWithType('error', 'Error', err.reason)
       }
